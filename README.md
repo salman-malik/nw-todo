@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NerdWallet Todo App
 
-## Getting Started
+A simple, modern to-do list application built with Next.js, Material-UI, TypeScript, and PostgreSQL.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ✅ Create, view, edit, and delete tasks
+- ✅ Mark tasks as complete
+- ✅ Set priorities (Low, Medium, High)
+- ✅ Responsive design for all devices
+- ✅ Dynamic dark/light mode with Material-UI
+- ✅ Server Actions for all CRUD operations
+- ✅ PostgreSQL database with Prisma ORM
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js 15+, Material-UI (MUI), TypeScript
+- **Backend:** Next.js Server Actions, Prisma ORM
+- **Database:** PostgreSQL
+- **Deployment:** Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup Instructions
 
-## Learn More
+### Prerequisites
+- Node.js 18+
+- npm
+- PostgreSQL database (local or cloud, e.g., Vercel Postgres or Neon)
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/nerdwallet-todo-app.git
+   cd nerdwallet-todo-app
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Set up your environment variables:**
+   Create a `.env` file in the root directory with:
+   ```
+   DATABASE_URL=postgresql://username:password@host:port/dbname?schema=public
+   ```
+   Replace with your actual PostgreSQL credentials and connection info.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Set up the database:**
+   - If using migrations:
+     ```bash
+     npx prisma migrate deploy
+     ```
+   - Or, to just push the schema:
+     ```bash
+     npx prisma db push
+     ```
+   - (Optional) Seed the database:
+     ```bash
+     npm run db:seed
+     ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+6. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
+
+## Deployment
+
+This application is ready for deployment on Vercel with a managed PostgreSQL database:
+
+1. **Create a Vercel project and link it to your GitHub repository.**
+2. **Set the `DATABASE_URL` environment variable in Vercel** (Project Settings > Environment Variables).
+3. **Deploy the application.**
+4. **Run your Prisma migrations on the production database** (see Setup step 4).
+
+## Architecture Decisions
+
+- **Material-UI (MUI):** Used for all UI components and theming, including dynamic dark/light mode.
+- **Next.js Server Actions:** Used for all database operations for simplicity and security.
+- **Prisma ORM:** Provides type-safe database access and schema management.
+- **TypeScript:** Used throughout for type safety and better developer experience.
+- **Component Structure:** Separated into reusable components for maintainability.
+- **Theme Provider:** Theme context and provider manage color mode and theme switching across the app.
+
+## Notes
+- All UI is now handled by Material-UI, ensuring consistent theming and accessibility.
+- Dark/light mode is fully dynamic and persists across sessions.
+- For local development, you can use a local Postgres instance or a cloud provider like Neon or Vercel Postgres.
+
+---
+
+**Enjoy your modern, theme-aware todo app!**
