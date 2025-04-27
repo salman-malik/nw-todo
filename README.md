@@ -30,8 +30,8 @@ A simple, modern to-do list application built with Next.js, Material-UI, TypeScr
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/nerdwallet-todo-app.git
-   cd nerdwallet-todo-app
+   git clone https://github.com/salman-malik/nw-todo.git
+   cd nw-todo
    ```
 
 2. **Install dependencies:**
@@ -42,9 +42,8 @@ A simple, modern to-do list application built with Next.js, Material-UI, TypeScr
 3. **Set up your environment variables:**
    Create a `.env` file in the root directory with:
    ```
-   DATABASE_URL=postgresql://username:password@host:port/dbname?schema=public
+   DATABASE_URL="prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMWNlZmIxNzUtNTZhMC00ZDM1LTk4MmYtNzc1NDdiYzgwOTVhIiwidGVuYW50X2lkIjoiYmNiNDlhNjg3YzgzM2VjNzI0N2FkYjBjZmY3N2JmNDgzZjAyMWY1ZjNkMzk0OTgyZmZkZDg3NGE1NGM2ZjQ1MiIsImludGVybmFsX3NlY3JldCI6IjIwMDNmMDczLTliY2ItNDIwNC1iZmNhLTBiNTU4MTg5MzFlNiJ9.odcDQIFTAJg0uT50CVdtX5mG2SAl8xXPv5fRZ1vqPpc"
    ```
-   Replace with your actual PostgreSQL credentials and connection info.
 
 4. **Set up the database:**
    - If using migrations:
