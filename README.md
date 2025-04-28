@@ -54,12 +54,3 @@
 
 6. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
 
-## Deployment
-
-This application is ready for deployment on Vercel with a managed PostgreSQL database:
-
-1. **Create a Vercel project and link it to your GitHub repository.**
-2. **Set the `DATABASE_URL` environment variable in Vercel** (Project Settings > Environment Variables).
-3. **Deploy the application.**
-4. **Run your Prisma migrations on the production database** (see Setup step 4).
-
