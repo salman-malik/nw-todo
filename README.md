@@ -1,17 +1,5 @@
 # NerdWallet Todo App
 
-A simple, modern to-do list application built with Next.js, Material-UI, TypeScript, and PostgreSQL.
-
-## Features
-
-- ✅ Create, view, edit, and delete tasks
-- ✅ Mark tasks as complete
-- ✅ Set priorities (Low, Medium, High)
-- ✅ Responsive design for all devices
-- ✅ Dynamic dark/light mode with Material-UI
-- ✅ Server Actions for all CRUD operations
-- ✅ PostgreSQL database with Prisma ORM
-
 ## Tech Stack
 
 - **Frontend:** Next.js 15+, Material-UI (MUI), TypeScript
@@ -75,20 +63,3 @@ This application is ready for deployment on Vercel with a managed PostgreSQL dat
 3. **Deploy the application.**
 4. **Run your Prisma migrations on the production database** (see Setup step 4).
 
-## Architecture Decisions
-
-- **Material-UI (MUI):** Used for all UI components and theming, including dynamic dark/light mode.
-- **Next.js Server Actions:** Used for all database operations for simplicity and security.
-- **Prisma ORM:** Provides type-safe database access and schema management.
-- **TypeScript:** Used throughout for type safety and better developer experience.
-- **Component Structure:** Separated into reusable components for maintainability.
-- **Theme Provider:** Theme context and provider manage color mode and theme switching across the app.
-
-## Notes
-- All UI is now handled by Material-UI, ensuring consistent theming and accessibility.
-- Dark/light mode is fully dynamic and persists across sessions.
-- For local development, you can use a local Postgres instance or a cloud provider like Neon or Vercel Postgres.
-
----
-
-**Enjoy your modern, theme-aware todo app!**
